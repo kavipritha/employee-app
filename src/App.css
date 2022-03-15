@@ -1,7 +1,63 @@
 .App {
   text-align: center;
 }
+.post-list{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  max-width:1000px;
+  flex-direction:column;
+  padding:1rem;
+  background-color:#ccc
+}
+.container-main
+{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  margin: 20px;
+}
+.header-text
+{
+ text-align: center;
+ font-weight: bold;
+}
 
+.home-page
+{
+  display:flex;
+  flex-direction: column;
+  margin: 10px;
+  
+}
+.employee-page
+{
+  display:flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.employee-card
+{display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 2px solid red;
+  margin: 2px;
+  width: 300px;
+}
+.employee-card-img
+{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.employee-card-title
+{display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

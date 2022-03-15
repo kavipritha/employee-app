@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from "./component/HeaderComponent";
+
+
+import EmployeePage from "./component/EmployeePageComponent";
+import SearchBar from "./component//SearchBarComponent";
+
+const arrayOfObjects = [
+  { name: "James King", designation: "Medium" },
+  { name: "Julie Taylor", designation: "Single" },
+  { name: "Eugene Lee", designation: "Medium" },
+  { name: "John Williams", designation: "Single" },
+  { name: "Ray Moore", designation: "Medium" },
+  { name: "Paul Jones", designation: "Single" },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container-main'>
+<div className='home-page'>
+<Header headerText='Employee directory'></Header>
+<SearchBar searchBoxText='test text' searchList={arrayOfObjects}></SearchBar>
+</div>
+<div className='employee-page'>
+<Header headerText='Employee'></Header>
+<EmployeePage></EmployeePage>
+</div>
+      </div>
     </div>
   );
 }
