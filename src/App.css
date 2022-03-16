@@ -58,6 +58,11 @@
   align-items: flex-start;
   margin-left: 5px;
 }
+.search-bar-input{
+  margin: 5px;
+  width: 90%;
+  height: 30px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

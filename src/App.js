@@ -7,12 +7,12 @@ import EmployeePage from "./component/EmployeePageComponent";
 import SearchBar from "./component//SearchBarComponent";
 
 const arrayOfObjects = [
-  { name: "James King", designation: "Medium" },
-  { name: "Julie Taylor", designation: "Single" },
-  { name: "Eugene Lee", designation: "Medium" },
-  { name: "John Williams", designation: "Single" },
-  { name: "Ray Moore", designation: "Medium" },
-  { name: "Paul Jones", designation: "Single" },
+  { id:1, name: "James King", designation: "President and CEO" },
+  { id:2,  name: "Julie Taylor", designation: "VP of marketing" },
+  {  id:3, name: "Eugene Lee", designation: "CFO" },
+  {  id:4, name: "John Williams", designation: "VP of Engineering" },
+  {  id:5, name: "Ray Moore", designation: "VP of Sales" },
+  {  id:6, name: "Paul Jones", designation: "QA Manager" },
 ];
 
 function App() {

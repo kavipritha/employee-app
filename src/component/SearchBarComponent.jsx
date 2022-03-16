@@ -10,15 +10,31 @@ class SearchBar extends React.Component {
   }
   handleChange(e) {
     this.setState({ searchBoxText: e.target.value })
-   //filter list here searchList
+    const keyword = e.target.value;
+    if (keyword !== '') {
+      const results = this.props?.searchList.filter((user) => {
+        return user.name.toLowerCase().startsWith(keyword.toLowerCase());
+        // Use the toLowerCase() method to make it case-insensitive
+      });
+      console.log(results)
+      this.setState({
+        searchList: results
+      })
+    } else {
+      // If the text field is empty, show all users
+      this.setState({
+        searchList: this.props?.searchList
+      })
+    }
 }
   render() {
     return (
      <div>
-          <input type="text" 
+          <input type="text" className='search-bar-input'
                         onChange={(e) => { this.handleChange(e) }}/>
-                        {this.props?.searchList.map((user) => (
-        <div className="user">
+                        {this.state?.searchList.map((user) => (
+                          
+        <div key={user.id} className="user">
             <EmployeeItem employee={user}></EmployeeItem>
             </div>
       ))}
